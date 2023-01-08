@@ -3,25 +3,30 @@ import Affair from './affair/Affair'
 import {AffairType, FilterType} from '../HW2'
 import s from './Affairs.module.css'
 
+/*
+* 7 - в файле Affairs.tsx дописать типизацию пропсов
+* 8 - в файле Affairs.tsx дописать логику функций setAll, setHigh, setMiddle, setLow
+* */
+
 type AffairsPropsType = {
-    data: any // need to fix any
-    setFilter: any
-    deleteAffairCallback: any
+    data: AffairType[], // need to fix any
+    setFilter: (filter: string) => void,
+    deleteAffairCallback: (id: number) => void,
     filter: FilterType
 }
 
 function Affairs(props: AffairsPropsType) {
     const setAll = () => {
-        // need to fix
+        props.setFilter('all')
     }
     const setHigh = () => {
-        // need to fix
+        props.setFilter('high')
     }
     const setMiddle = () => {
-        // need to fix
+        props.setFilter('middle')
     }
     const setLow = () => {
-        // need to fix
+        props.setFilter('low')
     }
 
     const cnAll = s.button + ' ' + s.all + (props.filter === 'all' ? ' ' + s.active : '')
@@ -29,10 +34,17 @@ function Affairs(props: AffairsPropsType) {
     const cnMiddle = s.button + ' ' + s.middle + (props.filter === 'middle' ? ' ' + s.active : '')
     const cnLow = s.button + ' ' + s.low + (props.filter === 'low' ? ' ' + s.active : '')
 
-    const mappedAffairs = props.data.map((a: AffairType) => (
+
+    // export type AffairType = {
+    //     _id: number, // need to fix any
+    //     name: string, // need to fix any
+    //     priority: string   // warning
+    // }
+
+    const mappedAffairs = props.data.map((affair: AffairType) => (
         <Affair
-            key={a._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
-            affair={a}
+            key={affair._id} // кеи ОБЯЗАТЕЛЬНЫ в 99% - так что лучше их писать всегда при создании компонент в мапе
+            affair={affair}
             deleteAffairCallback={props.deleteAffairCallback}
         />
     ))
