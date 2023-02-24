@@ -1,9 +1,31 @@
-.select {
+.select{
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #000000;
+    width: 165px;
+    height: 24px;
+    padding-left: 10px;
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-down" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M1.646 4.646a.5.5 0 0 1 .708 0L8 10.293l5.646-5.647a.5.5 0 0 1 .708.708l-6 6a.5.5 0 0 1-.708 0l-6-6a.5.5 0 0 1 0-.708z"/></svg>') no-repeat right #FFFFFF;
+    -webkit-appearance: none;
+    padding-right: 1.5rem;
+    background-position: right 0.1rem center;
+    border: 1px solid #C2C2C2;
+    border-radius: 2px;
 }
-
 .select:focus {
+    background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-chevron-up" viewBox="0 0 16 16"><path fill-rule="evenodd" d="M7.646 4.646a.5.5 0 0 1 .708 0l6 6a.5.5 0 0 1-.708.708L8 5.707l-5.646 5.647a.5.5 0 0 1-.708-.708l6-6z"/></svg>') no-repeat right #FFFFFF;
+    background-position: right 0.1rem center;
+    border: 1px solid #C2C2C2;
+    outline: none;
+    border-radius: 2px;
 }
-
 
 .option:hover {
+    cursor: crosshair;
+    background-color: #FFFFFF;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 14px;
+    line-height: 17px;
+    color: #0066CC;
 }
