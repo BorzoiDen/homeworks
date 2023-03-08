@@ -4,6 +4,7 @@ import {loadingAC} from './bll/loadingReducer'
 import SuperButton from '../hw04/common/c2-SuperButton/SuperButton'
 import s2 from '../../s1-main/App.module.css'
 import {Loader} from './Loader'
+import {AppStoreType} from "./bll/store";
 
 
 /*
@@ -17,9 +18,7 @@ const HW10 = () => {
 
     const dispatch = useDispatch();
 
-    // @ts-ignore
-    const isLoading = useSelector(state => state.loading.isLoading);
-
+    const isLoading = useSelector<AppStoreType, boolean>(state => state.loading.isLoading);
 
     const setLoading = () => {
         dispatch(loadingAC(true))
