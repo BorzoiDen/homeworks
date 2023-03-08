@@ -34,7 +34,7 @@ function Clock() {
 
 
     const stringMonth = date.toLocaleDateString('en-US', {month: 'long'}) || <br/>
-    const stringDate = date.toLocaleString('fr-CH', {day: "2-digit", month: "2-digit", year: '2-digit'}) || <br/>
+    const stringDate = date.toLocaleString('fr-CH', {day: "2-digit", month: "2-digit", year: 'numeric'}) || <br/>
 
 
 
